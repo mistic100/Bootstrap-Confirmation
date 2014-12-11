@@ -147,7 +147,7 @@
       .prepend($('<i></i>').addClass(o.btnOkIcon), ' ')
       .off('click')
       .one('click', function(e) {
-        that.getOnConfirm.call(that).call(that.$element);
+        that.getOnConfirm.call(that).call(that.$element, e);
         that.$element.trigger('confirmed.bs.confirmation');
         that.leave(that);
       });
