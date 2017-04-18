@@ -38,6 +38,7 @@
     title: 'Are you sure?',
     popout: false,
     singleton: false,
+    allowOnClick: false,
     copyAttributes: 'href target',
     buttons: null,
     onConfirm: $.noop,
@@ -121,13 +122,15 @@
       }, this);
 
       // cancel original event
-      this.$element.on(this.options.trigger, function(e, ack) {
-        if (!ack) {
-          e.preventDefault();
-          e.stopPropagation();
-          e.stopImmediatePropagation();
-        }
-      });
+      if (!this.options.allowOnClick) {
+        this.$element.on(this.options.trigger, function(e, ack) {
+          if (!ack) {
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+          }
+        });
+      }
 
       // manage singleton
       this.$element.on('show.bs.confirmation', function(e) {
@@ -141,13 +144,15 @@
     }
     else {
       // cancel original event
-      this.$element.on(this.options.trigger, this.options.selector, function(e, ack) {
-        if (!ack) {
-          e.preventDefault();
-          e.stopPropagation();
-          e.stopImmediatePropagation();
-        }
-      });
+      if (!this.options.allowOnClick) {
+        this.$element.on(this.options.trigger, this.options.selector, function(e, ack) {
+          if (!ack) {
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+          }
+        });
+      }
     }
 
     if (!this.options._isDelegate) {
@@ -199,9 +204,12 @@
       this.options.html ? (typeof content == 'string' ? 'html' : 'append') : 'text'
       ](content);
 
-    $tip.on('click', function(e) {
-      e.stopPropagation();
-    });
+
+    if (!this.options.allowOnClick) {
+      $tip.on('click', function(e) {
+        e.stopPropagation();
+      });
+    }
 
     if (this.options.buttons) {
       // configure custom buttons
@@ -257,7 +265,9 @@
           self.getOnConfirm.call(self).call(self.$element);
           self.$element.trigger('confirmed.bs.confirmation');
 
-          self.$element.trigger(self.options.trigger, [true]);
+          if (!self.options.allowOnClick) {
+            self.$element.trigger(self.options.trigger, [true]);
+          }
 
           self.hide();
         });
