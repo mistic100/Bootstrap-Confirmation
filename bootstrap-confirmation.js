@@ -18,7 +18,7 @@
   // CONFIRMATION PUBLIC CLASS DEFINITION
   // ===============================
   var Confirmation = function(element, options) {
-    options.trigger = 'click';
+    options.trigger !== 'custom' || (options.trigger = 'click');
 
     this.init(element, options);
   };
