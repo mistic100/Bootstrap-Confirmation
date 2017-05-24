@@ -155,7 +155,7 @@
     if (!this.options._isDelegate) {
       // manage popout
       this.eventBody = false;
-      this.uid = this.$element[0].id || this.getUID('group_');
+      //this.uid = this.$element[0].id || this.getUID('group_');
 
       this.$element.on('shown.bs.confirmation', function(e) {
         if (self.options.popout && !self.eventBody) {
