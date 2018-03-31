@@ -313,15 +313,15 @@ var Confirmation = function () {
     };
 
 		/**
-		* Remove key binding on destroy
+		* Remove key binding on dispose
 		*/
-    _proto.destroy = function () {
+    _proto.dispose = function () {
       if (activeConfirmation === this) {
         activeConfirmation = undefined;
         $(window).off('keyup.bs.confirmation');
       }
 
-      _Popover.prototype.destroy.call(this);
+      _Popover.prototype.dispose.call(this);
     };
 
 		/**
@@ -436,7 +436,7 @@ var Confirmation = function () {
         var _config = (typeof config === 'object' && config) || {};
         _config.rootSelector = $this.selector || _config.rootSelector; // this.selector removed in jQuery > 3
 
-        if (!data && /destroy|hide/.test(config)) {
+        if (!data && /dispose|hide/.test(config)) {
           return;
         }
 
