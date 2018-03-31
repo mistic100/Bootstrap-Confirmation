@@ -6,41 +6,48 @@
 
   <title>Bootstrap Confirmation</title>
 
-  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <style>
+    .popover {
+      max-width: 600px;
+    }
+  </style>
 </head>
 
 <body>
 
 <div class="container">
-  <div class="col-md-12 col-lg-10 col-lg-offset-1">
+  <div class="col-md-12 col-lg-10 offset-lg-1">
     <div class="page-header">
-      <a class="pull-right" href="https://github.com/mistic100/Bootstrap-Confirmation">
+      <a class="float-right" href="https://github.com/mistic100/Bootstrap-Confirmation">
         <img src="https://assets.github.com/images/icons/emoji/octocat.png" width=48px height=48px>
       </a>
       <h1>Bootstrap Confirmation</h1>
     </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">Basic</div>
-      <div class="panel-body">
-        <button class="btn btn-default" data-toggle="confirmation">Confirmation</button>
+    <div class="card mb-3">
+      <div class="card-header">Basic</div>
+      <div class="card-body">
+        <button class="btn btn-primary" data-toggle="confirmation">Confirmation</button>
       </div>
     </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">Link</div>
-      <div class="panel-body">
-        <a class="btn btn-default" data-toggle="confirmation" href="https://google.com">Go to Google</a>
+    <div class="card mb-3">
+      <div class="card-header">Link</div>
+      <div class="card-body">
+        <a class="btn btn-primary" data-toggle="confirmation"
+          href="https://google.com" target="_blank">Go to Google</a>
       </div>
     </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">Customize</div>
-      <div class="panel-body">
-        <button class="btn btn-default" data-toggle="confirmation"
-                data-btn-ok-label="Continue" data-btn-ok-icon="glyphicon glyphicon-share-alt"
+    <div class="card mb-3">
+      <div class="card-header">Customize</div>
+      <div class="card-body">
+        <button class="btn btn-primary" data-toggle="confirmation"
+                data-btn-ok-label="Continue"
                 data-btn-ok-class="btn-success"
-                data-btn-cancel-label="Stoooop!" data-btn-cancel-icon="glyphicon glyphicon-ban-circle"
+                data-btn-cancel-label="Stoooop!"
                 data-btn-cancel-class="btn-danger"
                 data-title="Is it ok?" data-content="This might be dangerous">
           Confirmation
@@ -48,55 +55,56 @@
       </div>
     </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">Directions</div>
-      <div class="panel-body">
-        <button class="btn btn-default" data-toggle="confirmation" data-placement="left">Confirmation on left</button>
-        <button class="btn btn-default" data-toggle="confirmation" data-placement="top">Confirmation on top</button>
-        <button class="btn btn-default" data-toggle="confirmation" data-placement="bottom">Confirmation on bottom
+    <div class="card mb-3">
+      <div class="card-header">Directions</div>
+      <div class="card-body">
+        <button class="btn btn-primary" data-toggle="confirmation" data-placement="left">Confirmation on left</button>
+        <button class="btn btn-primary" data-toggle="confirmation" data-placement="top">Confirmation on top</button>
+        <button class="btn btn-primary" data-toggle="confirmation" data-placement="bottom">Confirmation on bottom
         </button>
-        <button class="btn btn-default" data-toggle="confirmation" data-placement="right">Confirmation on right</button>
+        <button class="btn btn-primary" data-toggle="confirmation" data-placement="right">Confirmation on right</button>
       </div>
     </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">Singleton</div>
-      <div class="panel-body">
-        <button class="btn btn-default" data-toggle="confirmation-singleton" data-singleton="true">Confirmation 1
+    <div class="card mb-3">
+      <div class="card-header">Singleton</div>
+      <div class="card-body">
+        <button class="btn btn-primary" data-toggle="confirmation-singleton" data-singleton="true">Confirmation 1
         </button>
-        <button class="btn btn-default" data-toggle="confirmation-singleton" data-singleton="true">Confirmation 2
+        <button class="btn btn-primary" data-toggle="confirmation-singleton" data-singleton="true">Confirmation 2
         </button>
       </div>
     </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">Popout</div>
-      <div class="panel-body">
-        <button class="btn btn-default" data-toggle="confirmation-popout" data-popout="true">Confirmation 1</button>
-        <button class="btn btn-default" data-toggle="confirmation-popout" data-popout="true">Confirmation 2</button>
+    <div class="card mb-3">
+      <div class="card-header">Popout</div>
+      <div class="card-body">
+        <button class="btn btn-primary" data-toggle="confirmation-popout" data-popout="true">Confirmation 1</button>
+        <button class="btn btn-primary" data-toggle="confirmation-popout" data-popout="true">Confirmation 2</button>
       </div>
     </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">Delegation</div>
-      <div class="panel-body" id="confirmation-delegate">
-        <button class="btn btn-default">Confirmation 1</button>
-        <button class="btn btn-default">Confirmation 2</button>
+    <div class="card mb-3">
+      <div class="card-header">Delegation</div>
+      <div class="card-body" id="confirmation-delegate">
+        <button class="btn btn-primary">Confirmation 1</button>
+        <button class="btn btn-primary">Confirmation 2</button>
       </div>
     </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">Custom buttons</div>
-      <div class="panel-body">
-        <button class="btn btn-default" id="custom-confirmation">Choose your currency</button>
-        <button class="btn btn-default" id="custom-confirmation-links">Share to</button>
+    <div class="card mb-3">
+      <div class="card-header">Custom buttons</div>
+      <div class="card-body">
+        <button class="btn btn-primary" id="custom-confirmation">Choose your transportation</button>
+        <button class="btn btn-primary" id="custom-confirmation-links">Share to</button>
       </div>
     </div>
   </div>
 </div>
 
-<script src="../bower_components/jquery/dist/jquery.js"></script>
-<script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+<script src="../node_modules/popper.js/dist/umd/popper.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
 <script src="../bootstrap-confirmation.js"></script>
 
 <script>
@@ -120,33 +128,41 @@
     selector: 'button'
   });
 
-  var currency = '';
+  var transportation = '';
   $('#custom-confirmation').confirmation({
     rootSelector: '#custom-confirmation',
     container: 'body',
-    title: null,
-    onConfirm: function(currency) {
-      alert('You choosed ' + currency);
+    title: '',
+    onConfirm: function(transportation) {
+      alert('You chose ' + transportation);
     },
     buttons: [
       {
         class: 'btn btn-danger',
-        icon: 'glyphicon glyphicon-usd',
-        value: 'US Dollar'
+        iconclass: 'material-icons',
+        iconcontent: 'directions_railway',
+        label: '&nbsp;Railway',
+        value: 'Railway'
       },
       {
         class: 'btn btn-primary',
-        icon: 'glyphicon glyphicon-euro',
-        value: 'Euro'
+        iconclass: 'material-icons',
+        iconcontent: 'directions_car',
+        label: '&nbsp;Car',
+        value: 'Car'
       },
       {
         class: 'btn btn-warning',
-        icon: 'glyphicon glyphicon-bitcoin',
-        value: 'Bitcoin'
+        iconclass: 'material-icons',
+        iconcontent: 'directions_boat',
+        label: '&nbsp;Boat',
+        value: 'Boat'
       },
       {
-        class: 'btn btn-default',
-        icon: 'glyphicon glyphicon-remove',
+        class: 'btn btn-secondary',
+        iconclass: 'material-icons',
+        iconcontent: 'cancel',
+        label: '&nbsp;Cancel',
         cancel: true
       }
     ]
@@ -155,29 +171,37 @@
   $('#custom-confirmation-links').confirmation({
     rootSelector: '#custom-confirmation-link',
     container: 'body',
-    title: null,
+    title: '',
     buttons: [
       {
-        label: 'Twitter',
+        label: '&nbsp;Twitter',
+        iconclass: 'fa fa-twitter fa-lg',
         attr: {
-          href: 'https://twitter.com'
+          href: 'https://twitter.com',
+          target: '_blank'
         }
       },
       {
-        label: 'Facebook',
+        label: '&nbsp;Facebook',
+        iconclass: 'fa fa-facebook fa-lg',
         attr: {
-          href: 'https://facebook.com'
+          href: 'https://facebook.com',
+          target: '_blank'
         }
       },
       {
-        label: 'Pinterest',
+        label: '&nbsp;Pinterest',
+        iconclass: 'fa fa-pinterest fa-lg',
         attr: {
-          href: 'https://pinterest.com'
+          href: 'https://pinterest.com',
+          target: '_blank'
         }
       }
     ]
   });
 </script>
+
+<script src="https://use.fontawesome.com/5dfc29e1bc.js"></script>
 
 <script>
   document.write('<script src="//' + location.host.split(':')[0] + ':35729/livereload.js" async defer><' + '/script>');
