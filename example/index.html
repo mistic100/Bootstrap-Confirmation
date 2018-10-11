@@ -103,6 +103,13 @@
         <button class="btn btn-default" id="custom-confirmation-links">Share to</button>
       </div>
     </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">Destroy</div>
+      <div class="panel-body">
+        <button class="btn btn-default" id="destroy-confirmation">Will not work</button>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -200,6 +207,10 @@
       }
     ]
   });
+
+  $('#destroy-confirmation')
+      .confirmation({placement: 'top'})
+      .confirmation('destroy');
 </script>
 
 <script>

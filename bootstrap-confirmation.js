@@ -431,12 +431,17 @@
       var $this = $(this);
       var data = $this.data('bs.confirmation');
 
-      if (!data && option == 'destroy') {
-        return;
-      }
       if (!data) {
         $this.data('bs.confirmation', (data = new Confirmation(this, options)));
       }
+
+      if (typeof option == 'string' && option == 'destroy') {
+          data['hide']();
+          Confirmation.prototype.hide = $.fn.popover.Constructor.prototype.hide;
+          data[option]();
+          return;
+      }
+
       if (typeof option == 'string') {
         data[option]();
 
