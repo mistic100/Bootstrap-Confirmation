@@ -314,6 +314,7 @@
     $.fn.popover.Constructor.prototype.disable.call(this);
 
     // should be used, but need to find a way to re-init it on next .confirmation() call
+    // currently calling to .init() after destroy leads to 2 clicks gap on show
     // $.fn.popover.Constructor.prototype.destroy.call(this);
   };
 
@@ -439,7 +440,7 @@
       }
 
       if (data.disabled) {
-        data.enable();
+          data.init(this, options);
       }
 
       if (typeof option == 'string' && option == 'destroy') {
