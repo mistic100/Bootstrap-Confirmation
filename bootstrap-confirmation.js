@@ -311,7 +311,10 @@
       activeConfirmation = undefined;
       $(window).off('keyup.bs.confirmation');
     }
-    $.fn.popover.Constructor.prototype.destroy.call(this);
+    $.fn.popover.Constructor.prototype.disable.call(this);
+
+    // should be used, but need to find a way to re-init it on next .confirmation() call
+    // $.fn.popover.Constructor.prototype.destroy.call(this);
   };
 
   /**
@@ -435,10 +438,16 @@
         $this.data('bs.confirmation', (data = new Confirmation(this, options)));
       }
 
+      if (data.disabled) {
+        data.enable();
+      }
+
       if (typeof option == 'string' && option == 'destroy') {
+        console.log('destroy');
           data['hide']();
           Confirmation.prototype.hide = $.fn.popover.Constructor.prototype.hide;
           data[option]();
+          data.disabled = true;
           return;
       }
 
