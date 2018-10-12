@@ -443,7 +443,6 @@
       }
 
       if (typeof option == 'string' && option == 'destroy') {
-        console.log('destroy');
           data['hide']();
           Confirmation.prototype.hide = $.fn.popover.Constructor.prototype.hide;
           data[option]();
