@@ -21,7 +21,7 @@
     this.init(element, options);
   };
 
-  Confirmation.VERSION = '2.4.2';
+  Confirmation.VERSION = '2.4.3';
 
   /**
    * Map between keyboard events "keyCode|which" and "key"
