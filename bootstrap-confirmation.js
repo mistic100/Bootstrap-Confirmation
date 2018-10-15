@@ -443,11 +443,13 @@
           data.init(this, options);
       }
 
+      //destroy workaround
       if (typeof option == 'string' && option == 'destroy') {
           data['hide']();
           Confirmation.prototype.hide = $.fn.popover.Constructor.prototype.hide;
           data[option]();
           data.disabled = true;
+          $this.off('click');
           return;
       }
 
