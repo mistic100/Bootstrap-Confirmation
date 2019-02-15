@@ -68,6 +68,10 @@
     // @formatter:on
   });
 
+  if (Confirmation.DEFAULTS.whiteList) {
+    Confirmation.DEFAULTS.whiteList['*'].push('data-apply', 'data-dismiss');
+  }
+
   Confirmation.prototype = $.extend({}, $.fn.popover.Constructor.prototype);
   Confirmation.prototype.constructor = Confirmation;
 
