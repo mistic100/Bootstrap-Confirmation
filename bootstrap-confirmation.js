@@ -1,7 +1,7 @@
 /*!
  * Bootstrap Confirmation
  * Copyright 2013 Nimit Suwannagate <ethaizone@hotmail.com>
- * Copyright 2014-2017 Damien "Mistic" Sorel <contact@git.strangeplanet.fr>
+ * Copyright 2014-2019 Damien "Mistic" Sorel <contact@git.strangeplanet.fr>
  * Licensed under the Apache License, Version 2.0
  */
 
@@ -21,7 +21,7 @@
     this.init(element, options);
   };
 
-  Confirmation.VERSION = '2.4.2';
+  Confirmation.VERSION = '2.4.3';
 
   /**
    * Map between keyboard events "keyCode|which" and "key"
