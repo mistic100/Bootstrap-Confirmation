@@ -168,7 +168,7 @@
       this.$element.on('shown.bs.confirmation', function(e) {
         if (self.options.popout && !self.eventBody) {
           self.eventBody = $('body').on('click.bs.confirmation.' + self.uid, function(e) {
-            if ($(self.options._selector).is(e.target)) {
+            if ($(self.options._selector).is(e.target) || $(self.options._selector).has(e.target).length > 0) {
               return;
             }
 
