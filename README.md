@@ -1,7 +1,9 @@
 # Bootstrap-Confirmation
 
-[![Bower version](https://img.shields.io/bower/v/bootstrap-confirmation2.svg?style=flat-square)](bootstrap-confirmation.js.org)
-[![NPM version](https://img.shields.io/npm/v/bootstrap-confirmation2.svg?style=flat-square)](https://www.npmjs.com/package/bootstrap-confirmation2)
+[![npm version](https://img.shields.io/npm/v/bootstrap-confirmation2.svg?style=flat-square)](https://www.npmjs.com/package/bootstrap-confirmation2)
+[![jsDelivr CDN](https://data.jsdelivr.com/v1/package/npm/bootstrap-confirmation2/badge)](https://www.jsdelivr.com/package/npm/bootstrap-confirmation2)
+[![Build Status](https://img.shields.io/travis/mistic100/Bootstrap-Confirmation/master.svg?style=flat-square)](https://travis-ci.org/mistic100/Bootstrap-Confirmation)
+[![Dependencies Status](https://david-dm.org/mistic100/Bootstrap-Confirmation/status.svg?style=flat-square)](https://david-dm.org/mistic100/Bootstrap-Confirmation)
 
 Bootstrap plugin for on-place confirm boxes using Popover.
 
