@@ -32,15 +32,7 @@ export default {
       'export default Confirmation;'                     : ''
     }),
     babel({
-      exclude                 : 'node_modules/**', // Only transpile our source code
-      externalHelpersWhitelist: [ // Include only required helpers
-        'assertThisInitialized',
-        'defineProperties',
-        'createClass',
-        'inheritsLoose',
-        'defineProperty',
-        'objectSpread'
-      ]
+      exclude: 'node_modules/**'
     })
   ]
 };
