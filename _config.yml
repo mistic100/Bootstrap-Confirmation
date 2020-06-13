@@ -10,7 +10,7 @@ blobUrl: https://github.com/mistic100/Bootstrap-Confirmation/blob/master
 cdnUrl: https://cdn.jsdelivr.net/npm/bootstrap-confirmation2/dist
 # licence of the software
 license: Apache License v2.0
-licenseUrl: http://www.apache.org/licenses/LICENSE-2.0
+licenseUrl: https://www.apache.org/licenses/LICENSE-2.0
 # extension of the favicon, blank to disable
 favicon:
 
@@ -27,7 +27,7 @@ download:
   npm: bootstrap-confirmation2
   cdn:
     url: https://www.jsdelivr.com/package/npm/bootstrap-confirmation2
-    img: http://bootstrap-confirmation.js.org/assets/images/jsdelivr-logo.png
+    img: https://bootstrap-confirmation.js.org/assets/images/jsdelivr-logo.png
     name: jsDelivr
 
 # set this to true to replace the generated header navbar by _includes/navbar.html
@@ -38,7 +38,7 @@ headerLinks:
   - title: GitHub
     url: https://github.com/mistic100/Bootstrap-Confirmation
   - title: StrangePlanet
-    url: http://www.strangeplanet.fr
+    url: https://www.strangeplanet.fr
 
 # list if additional links on the footer
 footerLinks:
