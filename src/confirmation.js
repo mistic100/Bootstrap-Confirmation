@@ -354,7 +354,7 @@ class Confirmation extends Popover {
         .addClass(BTN_CLASS_BASE)
         .addClass(button.class || `${BTN_CLASS_DEFAULT} btn-secondary`)
         .html(button.label || '')
-        .attr(button.attr || {});
+        .attr(button.attr || (button.cancel ? {} : self.config._attributes));
 
       if (button.iconClass || button.iconContent) {
         btn.prepend($('<i></i>')
